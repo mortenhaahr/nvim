@@ -4,8 +4,8 @@
 
 vim.keymap.set("n", "ø", function()
   vim.diagnostic.goto_next()
-end, opts)
+end, { desc = "Diagnostics goto next" })
 
 vim.keymap.set("n", "æ", function()
   vim.diagnostic.goto_prev()
-end, opts)
+end, { desc = "Diagnostics goto prev" })
