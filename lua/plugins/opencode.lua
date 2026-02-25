@@ -103,7 +103,7 @@ return {
       {
         "<leader>ai",
         function()
-          require("opencode").ask("", { submit = true })
+          require("opencode").ask("@buffers ", { submit = true })
         end,
         mode = { "n", "x" },
         desc = "Ask",
@@ -195,4 +195,3 @@ return {
     },
   },
 }
-
