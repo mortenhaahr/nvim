@@ -1,3 +1,8 @@
+local function get_random_port()
+  math.randomseed(os.time() + vim.fn.getpid())
+  return math.random(49152, 65535)
+end
+
 return {
   {
     "Nickvandyke/opencode.nvim",
@@ -32,7 +37,7 @@ return {
 
       vim.api.nvim_create_autocmd({ "TermOpen" }, {
         group = vim.api.nvim_create_augroup("opencode_buffer", { clear = false }),
-        pattern = "*:opencode --port*",
+        pattern = "*:opencode --port " .. tostring(get_random_port()) .. "*",
         desc = "Assign binds specific to OpenCode buffers",
         callback = function(event)
           local bufname = vim.api.nvim_buf_get_name(event.buf) ---@type string
@@ -190,3 +195,4 @@ return {
     },
   },
 }
+
