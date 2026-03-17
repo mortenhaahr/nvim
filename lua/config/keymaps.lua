@@ -9,3 +9,5 @@ end, { desc = "Diagnostics goto next" })
 vim.keymap.set("n", "æ", function()
   vim.diagnostic.goto_prev()
 end, { desc = "Diagnostics goto prev" })
+
+vim.keymap.set("n", "<leader>gc", "<cmd>Git commit<CR>", { desc = "Git commit (Fugitive)" })
