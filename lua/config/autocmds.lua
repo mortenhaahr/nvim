@@ -15,3 +15,12 @@ vim.api.nvim_create_autocmd("VimLeavePre", {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.schedule(function()
+      Snacks.explorer()
+    end)
+  end,
+  once = true,
+})
