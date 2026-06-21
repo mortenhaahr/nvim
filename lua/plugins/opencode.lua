@@ -5,8 +5,13 @@ end
 
 return {
   {
+    -- For upstream:
     "Nickvandyke/opencode.nvim",
     version = "*",
+    -- For custom:
+    -- dir = "/home/morten/repos/opencode.nvim",
+    -- name = "opencode.nvim",
+    -- dev = true,
     dependencies = {
       ---@module "snacks"
       {
