@@ -191,6 +191,7 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "tree-sitter-cli@v0.23.2",
       },
     },
   },
