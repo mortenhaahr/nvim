@@ -18,3 +18,8 @@ vim.keymap.set(
   "<cmd>Git commit --amend --no-edit<CR>",
   { desc = "Git commit no-edit amend (Fugitive)" }
 )
+
+-- Navigate out of terminal windows (e.g. the Claude Code snacks terminal) with <C-w>h/j/k/l
+for _, dir in ipairs({ "h", "j", "k", "l" }) do
+  vim.keymap.set("t", "<C-w>" .. dir, "<cmd>wincmd " .. dir .. "<cr>", { desc = "Go to window " .. dir })
+end
